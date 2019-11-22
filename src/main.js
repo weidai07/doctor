@@ -12,7 +12,7 @@ $(document).ready(function() {
   let miles = $("#miles-input-field").val();
 
     let request = new XMLHttpRequest();
-    const url = `https://cors-anywhere.herokuapp.com/https://bikeindex.org:443/api/v3/search?page=1&per_page=100&location=${city}&distance=${miles}&stolenness=proximity`;
+    const url = `https://cors-anywhere.herokuapp.com/https://developer.betterdoctor.com/?API_KEY=40b1529ebd6af1e603feb3e6b4b724ad`;
 
     request.onreadystatechange = function() {
       if (this.readyState === 4 && this.status === 200) {
@@ -25,20 +25,20 @@ $(document).ready(function() {
     request.send();
 
     const getElements = function(response) {
-      let bikeInfo = response.bikes.length;
+      let docInfo = response.doc.length;
 
       $(".display-para").show();
-      $('#display-answer').empty().text(bikeInfo);
+      $('#display-answer').empty().text(docInfo);
       $("#distance-result").empty().text(miles);
     }
 
   });
 });
 
-const url = `https://cors-anywhere.herokuapp.com/https://developer.betterdoctor.com/=1&per_page=100&location=${city}&distance=${miles}&stolenness=proximity`;
 
 // App name
 // Epicodus's App
 // Key
 // 40b1529ebd6af1e603feb3e6b4b724ad
 // Add this as a user_key parameter to your API calls to authenticate.
+// API_KEY = 40b1529ebd6af1e603feb3e6b4b724ad
