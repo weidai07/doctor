@@ -1,25 +1,24 @@
 body {
-  background-color: cornflowerblue;
+  background-color: red;
 }
 
 h1 {
   font-family: 'Permanent Marker', sans-serif;
   text-align: center;
-  font-size: 200px;
-  margin-top: 100px;
+  font-size: 100px;
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 
 h2 {
   text-align: center;
   font-weight: bold;
-  font-style: italic;
   margin-bottom: 50px;
 }
 
 label {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 25px;
+  font-weight: italic;
 }
 
 .labels {
@@ -38,7 +37,7 @@ button {
   margin-top: 40px auto;
   font-size: 20px;
   color: white;
-  background-color: #B73239;
+  background-color: black;
   border-radius: 10px;
   padding: 5px 20px;
   margin-left: 45%;

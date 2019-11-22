@@ -2,31 +2,41 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <title>Doctor</title>
+    <title>Doctors</title>
   </head>
   <body>
 
     <div class="container">
 
-      <h1>Doctor</h1>
-      <h2>Find the number of Doctors in the Portland area.</h2>
+      <h1>Doctors</h1>
+      <h2>Find the Number of Doctors in the Portland Area.</h2>
 
       <div class="labels container card">
-        <label for="city-input-field">
+        <label for="doctor">
         Enter Issue:
-        <input id="city-input-field" type="text" name="" value="">
+        <input id="doctor" type="text" name="" value="">
         </label>
         <br>
-        <label for="miles-input-field">
-        Search Radius:
-        <input id="miles-input-field" type="text" name="" value="">
+        <label for="name">
+        Search Doctor:
+        <input id="name" type="text" name="" value="">
         </label>
+        <label for="firstName">
+        First Name:
+        <input id="firstName" type="text" name="" value="">
+        </label>
+        <br>
+        <label for="lastName">
+        Last Name:
+        <input id="lastName" type="text" name="" value="">
+        </label>
+        <br>
       </div>
 
       <button id="submit-button" type="button" name="button">Submit</button>
 
-      <div class="display-para card">
-        <h3>There are <span id="display-answer"></span> Doctors within a  <span id="distance-result"></span> mile radius.</h3>
+      <div class="display-name">
+
       </div>
 
     </div>

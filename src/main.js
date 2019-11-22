@@ -8,11 +8,13 @@ $(document).ready(function() {
 
   $('#submit-button').click(function() {
 
-  let city = $("#city-input-field").val();
-  let miles = $("#miles-input-field").val();
+  let doctor = $("#doctor").val();
+  let name = $("#name").val();
+  let name = $("#firstName").val();
+  let name = $("#lastName").val();
 
     let request = new XMLHttpRequest();
-    const url = `https://cors-anywhere.herokuapp.com/https://api.betterdoctor.com/2016-03-01/doctors?location=Portland&limit=50&user_key=40b1529ebd6af1e603feb3e6b4b724ad`;
+    const url = `https://cors-anywhere.herokuapp.com/https://api.betterdoctor.com/2016-03-01/doctors?first_name=${name}&last_name=${name}&specialty_uid=${doctor}&location=Portland&fields=${name}&limit=50&user_key=40b1529ebd6af1e603feb3e6b4b724ad`;
 
     request.onreadystatechange = function() {
       if (this.readyState === 4 && this.status === 200) {
@@ -27,9 +29,8 @@ $(document).ready(function() {
     const getElements = function(response) {
       let docInfo = response.doc.length;
 
-      $(".display-para").show();
-      $('#display-answer').empty().text(docInfo);
-      $("#distance-result").empty().text(miles);
+      $(".display-name").show();
+
     }
 
   });
@@ -42,4 +43,4 @@ $(document).ready(function() {
 // 40b1529ebd6af1e603feb3e6b4b724ad
 // Add this as a user_key parameter to your API calls to authenticate.
 // API_KEY = 40b1529ebd6af1e603feb3e6b4b724ad
-// ${city}
+// ${doctor}
