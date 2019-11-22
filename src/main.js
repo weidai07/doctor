@@ -12,7 +12,7 @@ $(document).ready(function() {
   let miles = $("#miles-input-field").val();
 
     let request = new XMLHttpRequest();
-    const url = `https://cors-anywhere.herokuapp.com/https://developer.betterdoctor.com/?API_KEY=40b1529ebd6af1e603feb3e6b4b724ad`;
+    const url = `https://cors-anywhere.herokuapp.com/https://api.betterdoctor.com/2016-03-01/doctors?location=Portland&limit=50&user_key=40b1529ebd6af1e603feb3e6b4b724ad`;
 
     request.onreadystatechange = function() {
       if (this.readyState === 4 && this.status === 200) {
@@ -42,3 +42,4 @@ $(document).ready(function() {
 // 40b1529ebd6af1e603feb3e6b4b724ad
 // Add this as a user_key parameter to your API calls to authenticate.
 // API_KEY = 40b1529ebd6af1e603feb3e6b4b724ad
+// ${city}
