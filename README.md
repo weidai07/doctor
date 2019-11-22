@@ -1,5 +1,5 @@
 # Webpack Template
-##### By Trevor Mackin
+##### By Wei Dai
 ###### Created November 13, 2019
 
 ## Description
@@ -8,7 +8,7 @@ _This is a template for future use in individual projects._
 
 ## Setup/Installation Requirements:
 
-1. Open https://ratta2ii.github.io/webpack-template
+1. Open https://weidai07.github.io/webpack-template
 2. Clone repository to local machine (or use as template to open new repo)
 3. Optional: Update title in webpack.config.js
 4. Optional: Update name of project in package in package.json
@@ -35,4 +35,4 @@ _This is a template for future use in individual projects._
 
 ### License:
 
-Copyright (c) 2019 **Trevor Mackin**
+Copyright (c) 2019 **Wei Dai**

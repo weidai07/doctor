@@ -34,3 +34,11 @@ $(document).ready(function() {
 
   });
 });
+
+const url = `https://cors-anywhere.herokuapp.com/https://developer.betterdoctor.com/=1&per_page=100&location=${city}&distance=${miles}&stolenness=proximity`;
+
+// App name
+// Epicodus's App
+// Key
+// 40b1529ebd6af1e603feb3e6b4b724ad
+// Add this as a user_key parameter to your API calls to authenticate.
