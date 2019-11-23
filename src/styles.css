@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-  font-family: 'Permanent Marker', sans-serif;
+  font-family: 'Permanent Marker', times;
   text-align: center;
   font-size: 100px;
   margin-top: 50px;
@@ -41,19 +41,4 @@ button {
   border-radius: 10px;
   padding: 5px 20px;
   margin-left: 45%;
-}
-
-.display-answer {
-  font-size: 50px;
-  text-align: center;
-}
-
-.display-para {
-  background-color: yellow;
-  display: none;
-  margin: 50px auto 0 auto;
-  padding: 20px;
-  border: 5px solid darkblue;
-  text-align: center;
-  width: 75%;
 }
