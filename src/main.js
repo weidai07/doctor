@@ -2,35 +2,39 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
+import { findDoctors } from './scripts';
 
 
 $(document).ready(function() {
 
-  $('#submit-button').click(function() {
+  $("#submit").click(function() {
 
-  let doctor = $("#doctor").val();
-  let name = $("#name").val();
+    $("#results").empty();  
 
+    let userInput = $("#userInput").val();
+    
 
-    let request = new XMLHttpRequest();
-    const url = `https://cors-anywhere.herokuapp.com/https://api.betterdoctor.com/2016-03-01/doctors?first_name=${name}&last_name=${name}&specialty_uid=${doctor}&location=Portland&fields=${name}&limit=50&user_key=40b1529ebd6af1e603feb3e6b4b724ad`;
+    findDoctors(userInput)
+      .then((response) => {
 
-    request.onreadystatechange = function() {
-      if (this.readyState === 4 && this.status === 200) {
-        const response = JSON.parse(this.responseText);
-        getElements(response);
-      }
-    }
+        let doctors = response.data;  
 
-    request.open("GET", url, true);
-    request.send();
+        if (doctors.length === 0){
+          $(".display-name").append(`<h4>There are no Doctors that meet this criteria.</h4>`);
+        }
 
-    const getElements = function(response) {
-      let docInfo = response.doc.length;
-
-      $(".display-name").text();
-
-    }
+        for (let i = 0; i < doctors.length; i++) {
+          $("#results").append(`<li>${doctors[i].practices[0].name}</li>
+          <li>${doctors[i].practices[0].visit_address.street}</li>
+          <li>${doctors[i].practices[0].visit_address.city}</li>
+          <li>${doctors[i].practices[0].visit_address.state}</li>
+          <li>${doctors[i].practices[0].visit_address.zip}</li>
+          <li>${doctors[i].practices[0].phones[0].number}</li>
+          <li>Accepting new paitents: ${doctors[i].practices[0].accepts_new_patients}</li><br>`);
+        }  
+      }, function(error) {
+        $("#results").append(`${error.message}`);
+      });
 
   });
 });
